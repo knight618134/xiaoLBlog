@@ -54,6 +54,7 @@
                         //这是在api.js封装的请求
                         this.postKeyValueRequest('/doLogin',this.loginForm).then(resp=>{
                              //隐藏加载样式
+                             //test
                              this.loading = false
                             if(resp){
                                 //resp：从服务端拿到的数据  用户的数据要保存到哪里？ 保存在sessionStorage  关闭浏览器就没了
