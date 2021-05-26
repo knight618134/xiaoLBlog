@@ -92,19 +92,21 @@ const routes = [
   },
   {
     path: '/system',
-    name: '配置',
+    name: '系統管理',
     component: Home,
     children: [
       {
         path: '/system/sysConfig',
         name: '系統配置',
+        icon:'el-icon-setting',
         components: {
           viewSystem: SysConfig,
         },
       },
       {
         path: '/system/area',
-        name: '行政區別',
+        name: '行政區域',
+        icon:'el-icon-location',
         components: {
           viewSystem: Area,
         },
@@ -112,6 +114,7 @@ const routes = [
       {
         path: '/system/menu',
         name: '系統功能',
+        icon:'el-icon-s-tools',
         components: {
           viewSystem: Menu,
         },
@@ -126,13 +129,15 @@ const routes = [
       {
         path: '/permission/organize',
         name: '組織管理',
+        icon:'el-icon-s-custom',
         components: {
           viewPermission: Organize,
         },
       },
       {
         path: '/permission/department',
-        name: '',
+        name: '部門管理',
+        icon:'el-icon-user-solid',
         components: {
           viewPermission: Department,
         },

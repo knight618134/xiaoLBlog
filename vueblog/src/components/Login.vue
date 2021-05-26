@@ -53,6 +53,7 @@
                         this.loading = true
                         //这是在api.js封装的请求
                         this.postKeyValueRequest('/doLogin',this.loginForm).then(resp=>{
+                            console.log(resp, 'resp')
                              //隐藏加载样式
                              //test
                              this.loading = false

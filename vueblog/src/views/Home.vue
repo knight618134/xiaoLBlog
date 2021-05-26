@@ -33,19 +33,18 @@
             <el-submenu
               :index="item.path"
               v-for="(item, index) in this.$router.options.routes"
-              v-if="!item.hidden && item.children"
+              v-if="!item.hidden"
               :key="index"
             >
               <template slot="title">
-                <i :class="item.icon || el-icon-location"></i>
                 <span>{{ item.name }}</span>
               </template>
               <el-menu-item
                 :index="child.path"
                 v-for="(child, indexj) in item.children"
-                v-if="!child.hidden"
                 :key="indexj"
               >
+                <i :class="child.icon||'el-icon-star-off'"></i>
                 {{ child.name }}
               </el-menu-item>
             </el-submenu>
