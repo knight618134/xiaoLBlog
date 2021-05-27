@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "form": {
+    "systemName": "fffffffgddd",
+    "systemPatch": "dddd",
+    "companyName": "ddddvcxc",
+    "copyrightInformation": "ddd",
+    "companyAbbreviation": "asa",
+    "companyAddress": "dd",
+    "corporate": "fg",
+    "companyTel": "ee",
+    "companyEmail": "eeee",
+    "systemDescribe": "qqererer"
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlblog.blog.mapper.BaseProvinceMapper">
+
+    <resultMap id="BaseProvinceMap" type="com.xlblog.blog.entity.BaseProvince">
+        <id column="F_ID" property="fId"/>
+        <result column="F_Encode" property="fEncode"/>
+        <result column="F_Fullname" property="fFullname"/>
+        <result column="F_Type" property="fType"/>
+    </resultMap>
+
+    <select id="findAllProvince" resultMap="BaseProvinceMap">
+        SELECT * FROM blog.base_province
+    </select>
+</mapper>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xlblog.blog.mapper.BaseSysconfigMapper">
+
+    <resultMap id="BaseSysConfigMap" type="com.xlblog.blog.entity.BaseSysconfig">
+        <id column="id" property="id"/>
+        <result column="systemname" property="systemname"/>
+        <result column="systempatch" property="systempatch"/>
+        <result column="companyname" property="companyname"/>
+        <result column="copyrightinformation" property="copyrightinformation"/>
+        <result column="companyabbreviation" property="companyabbreviation"/>
+        <result column="companyaddress" property="companyaddress"/>
+        <result column="corporate" property="corporate"/>
+        <result column="companytel" property="companytel"/>
+        <result column="companyemail" property="companyemail"/>
+        <result column="systemdescribe" property="systemdescribe"/>
+    </resultMap>
+
+
+    <!--sql語句-->
+    <sql id="Base_Column_List">
+        id, systemname, systempatch, companyname, copyrightinformation, companyabbreviation, companyaddress, corporate, companytel, companyemail, systemdescribe
+    </sql>
+
+    <!--增-->
+    <insert id="insert" parameterType="com.xlblog.blog.entity.BaseSysconfig">
+        insert into blog.base_sysconfig (systemName, systempatch,companyname, copyrightinformation, companyabbreviation, companyaddress, corporate, companytel, companyemail, systemdescribe)
+        values (#{systemname,jdbcType=VARCHAR}, #{systempatch,jdbcType=VARCHAR},
+                #{companyname,jdbcType=VARCHAR}, #{copyrightinformation,jdbcType=VARCHAR}, #{companyabbreviation,jdbcType=VARCHAR},
+                #{companyaddress,jdbcType=VARCHAR}, #{corporate,jdbcType=VARCHAR}, #{companytel,jdbcType=VARCHAR},
+                #{companyemail,jdbcType=VARCHAR}, #{systemdescribe,jdbcType=VARCHAR}
+               )
+    </insert>
+
+    <!--改-->
+    <update id="updateByPrimaryKeySelective" parameterType="com.xlblog.blog.entity.BaseSysconfig">
+        update blog.base_sysconfig
+        <set>
+            <if test="systemname != null">
+                systemName = #{systemname,jdbcType=VARCHAR},
+            </if>
+            <if test="systempatch != null">
+                systemPatch = #{systempatch,jdbcType=VARCHAR},
+            </if>
+            <if test="companyname != null">
+                companyName = #{companyname,jdbcType=VARCHAR},
+            </if>
+            <if test="copyrightinformation != null">
+                copyrightinformation = #{copyrightinformation,jdbcType=VARCHAR},
+            </if>
+            <if test="companyabbreviation != null">
+                companyabbreviation = #{companyabbreviation,jdbcType=VARCHAR},
+            </if>
+            <if test="companyaddress != null">
+                companyaddress = #{companyaddress,jdbcType=VARCHAR},
+            </if>
+            <if test="corporate != null">
+                corporate = #{corporate,jdbcType=VARCHAR},
+            </if>
+            <if test="companytel != null">
+                companytel = #{companytel,jdbcType=VARCHAR},
+            </if>
+            <if test="companyemail != null">
+                companyemail = #{companyemail,jdbcType=VARCHAR},
+            </if>
+            <if test="systemdescribe != null">
+                systemdescribe = #{systemdescribe,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <!--刪-->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from blog.base_sysconfig
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <select id="findAllSysConfig" resultMap="BaseSysConfigMap">
+        SELECT * FROM blog.base_sysconfig
+    </select>
+
+    <!--依 id 查-->
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseSysConfigMap">
+        select
+        <include refid="Base_Column_List" />
+        from blog.base_sysconfig
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+</mapper>
