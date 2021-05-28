@@ -13,6 +13,7 @@
     "json-server": "^0.16.3",
     "lodash": "^4.17.21",
     "mavon-editor": "^2.9.0",
+    "moment": "^2.29.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

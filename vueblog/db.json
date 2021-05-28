@@ -13,16 +13,62 @@
       "postId": 1
     }
   ],
-  "form": {
-    "systemName": "fffffffgddd",
-    "systemPatch": "dddd",
-    "companyName": "ddddvcxc",
-    "copyrightInformation": "ddd",
-    "companyAbbreviation": "asa",
-    "companyAddress": "dd",
-    "corporate": "fg",
-    "companyTel": "ee",
-    "companyEmail": "eeee",
-    "systemDescribe": "qqererer"
-  }
+  "organizeData": [
+    {
+      "name": "postRequest",
+      "encode": "postRequest",
+      "description": "postRequest",
+      "order": "2",
+      "createTime": "2021-05-28 17:50:14",
+      "id": 1
+    },
+    {
+      "name": "test5",
+      "encode": "test5",
+      "description": "test5",
+      "order": "1",
+      "createTime": "2021-05-28 18:00:00",
+      "id": 5
+    },
+    {
+      "name": "test6",
+      "encode": "tesxdsd",
+      "description": "adasdadad",
+      "order": "2",
+      "createTime": "2021-05-28 18:04:28",
+      "id": 6
+    },
+    {
+      "name": "666",
+      "encode": "666",
+      "description": "666",
+      "order": "6",
+      "createTime": "2021-05-28 18:04:58",
+      "id": 7
+    },
+    {
+      "name": "d",
+      "encode": "d",
+      "description": "f",
+      "order": "2",
+      "createTime": "2021-05-28 19:15:09",
+      "id": 9
+    },
+    {
+      "name": "ee",
+      "encode": "dd",
+      "description": "dsa",
+      "order": "2",
+      "createTime": "2021-05-28 19:20:40",
+      "id": 10
+    },
+    {
+      "name": "test4",
+      "encode": "test4",
+      "description": "test4",
+      "order": "4",
+      "createTime": "2021-05-28 21:54:53",
+      "id": 11
+    }
+  ]
 }
